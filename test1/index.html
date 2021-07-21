@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>test firma</title>
+	
+</head>
+<body>
+
+    <canvas id="cnv" name="cnv" width="500" height="100" style="background-color: #000;"></canvas>
+    <br>
+    <button onclick="StartSign()">Firma</button>
+
+    <br>
+    Campo que estara oculto, en el que recojemos obj.imageData.
+    <br>
+
+<form name="myForm" action="guarda_imagen.php" method="POST">
+
+	<textarea name="dataFirma" id="dataFirma" rows="10" cols="60"></textarea><br>
+	<button onclick="mandarFirma()">Mandar firma a archivo</button>
+
+</form>
+
+
+
+
+<script src="firma_2.js" type="text/javascript"></script>
+</body>
+</html>

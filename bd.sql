@@ -1,0 +1,106 @@
+DROP DATABASE IF EXISTS atlantico1;
+CREATE DATABASE atlantico1;
+USE atlantico1;
+
+DROP TABLE IF EXISTS usuarios;
+CREATE TABLE usuarios (
+	id INT AUTO_INCREMENT,
+	nombre VARCHAR(250) NOT NULL,
+	documento_tipo VARCHAR(250) NOT NULL,
+	documento_numero VARCHAR(250) NOT NULL,
+	telefono VARCHAR(250) NOT NULL,
+	correo VARCHAR(250) NOT NULL,
+	usuario VARCHAR(250) NOT NULL,
+	municipio VARCHAR(250) NOT NULL,
+	clave VARCHAR(250) NOT NULL,
+	PRIMARY KEY (id)
+); ALTER TABLE usuarios CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+
+INSERT INTO usuarios (nombre,documento_tipo,documento_numero,telefono,correo,usuario,clave,municipio) VALUES 
+('juan','PEP','9559487081993','3125318110','juanmaldonado.co@gmail.com','admin','e1f2e2d4f6598c43c2a45d2bd3acb7be','Prueba'),
+('CINDY TRINIDAD TOVAR CASTILLO','Cedula de ciudadania','1129539394','3008995052','noc@gmail.com','1129539394','8ce6fc704072e351679ac97d4a985574','SOLEDAD'),
+('ASHLEY CHAMORRO','Cedula de ciudadania','32874150','3045789459','noc@gmail.com','32874150','d45f54708857ac50ff4196830d52a9e1','SOLEDAD'),
+('YOCELIN TERNERA CHARRIS','Cedula de ciudadania','1044423036','3013839506','noc@gmail.com','1044423036','41f4d7068c705745c587548c3175d076','PTO COLOMBIA'),
+('GLADYS QUINTERO','Cedula de ciudadania','22517367','3106429460','noc@gmail.com','22517367','776d2d552ad32cde8ef0c53810b36699','PTO COLOMBIA'),
+('ISAIAS TEJERA KOOK','Cedula de ciudadania','1007132091','3106429460','noc@gmail.com','1007132091','0a253664c6866bacffd57338e8fa4ca4','GALAPA'),
+('JEISON BELTRAN','Cedula de ciudadania','1045238319','3017906056','noc@gmail.com','1045238319','4420315c7ed3e2f3c1d8d63c7fd2e10e','LURUACO'),
+('LUISA SUAREZ','Cedula de ciudadania','1002071868','3126573246','noc@gmail.com','1002071868','c53213a63cc6be8dcc74b97addc4d417','LURUACO'),
+('KASANDRA CANTILLO','Cedula de ciudadania','1042352944','3002371922','noc@gmail.com','1042352944','97d0733c2909cf3590742accd089ee74','SABANAGRANDE'),
+('HELLEN SAN ANDRES','Cedula de ciudadania','1143441523','3126849421','noc@gmail.com','1143441523','17a11bca3f45cf7a925a46b369af2b2e','SABANAGRANDE'),
+('ANDRES FELIPE MENDOZA ALVAREZ','Cedula de ciudadania','1043020776','3042001049','noc@gmail.com','1043020776','1403f37cd946a101dbc6d81f852fa3d8','SABANALARGA'),
+('VALENTINA GARCIA','Cedula de ciudadania','1043028036','3243116537','noc@gmail.com','1043028036','f55ae3986abcbd1ca3b98123ccee47a5','SABANALARGA'),
+('ANA GONZALEZ','Cedula de ciudadania','1044390849','3043285465','noc@gmail.com','1044390849','a12d2c4b555576af256e2a8808b5c2b3','JUAN DE ACOSTA'),
+('DEIVIS ALBA','Cedula de ciudadania','3730864','3006286549','noc@gmail.com','3730864','90483788d50e2d72a29eb1eaf530b9c0','JUAN DE ACOSTA'),
+('YOLANDA ISABEL MEJIA BONILLA','Cedula de ciudadania','32868355','3126345396','noc@gmail.com','32868355','4e33932259a5e44bf51c74ab204632c7','SANTO TOMAS'),
+('DYBER ACOSTA VERDUGO','Cedula de ciudadania','72313602','3043884153','noc@gmail.com','72313602','b4e97b46f700ecee271217bea6e8163e','SANTO TOMAS'),
+('ZULAY GUETTE','Cedula de ciudadania','22475752','3043584452','noc@gmail.com','22475752','4be5d9d72646c7fa4b2318b091be8b8b','CAMPO'),
+('LIZETH TORRENEGRA','Cedula de ciudadania','1043848091','3125003630','noc@gmail.com','1043848091','e7e716305af92fbf414caaf412b13f5b','CAMPO'),
+('JHON MENDOZA','Cedula de ciudadania','8521962','3022971831','noc@gmail.com','8521962','a6ab482fb9a93689e25c10cb7985330b','TUBARA'),
+('JOSE GERONIMO','Cedula de ciudadania','1001965571','3058386119','noc@gmail.com','1001965571','93fba26ca219bbfecaba60126a9cee10','TUBARA'),
+('RAYCHIL CASABUENAS','Cedula de ciudadania','1048332253','3232285497','noc@gmail.com','1048332253','d70f4683fc995f84cd6a46bf5d2f7b36','MALAMBO'),
+('LAURA CANTILLO SOTO','Cedula de ciudadania','1002235688','3017920646','noc@gmail.com','1002235688','e1e7e8c0e3a0d88193a450a71b2fd767','MALAMBO'),
+('CHELSY RODRIGUEZ RUIZ','Cedula de ciudadania','1042974833','3022223800','noc@gmail.com','1042974833','26b7f4ab9bae41eee6fdcb01b2f05ecc','MANATI'),
+('YULISA ANDREA RODRIGUEZ RUIZ','Cedula de ciudadania','1001865542','3244116038','noc@gmail.com','1001865542','7fd04d84d262bcc991f2ba751e4b12b4','MANATI');
+
+DROP TABLE IF EXISTS encuesta1;
+CREATE TABLE encuesta1 (
+	id INT AUTO_INCREMENT,
+	nombre VARCHAR(250) NOT NULL,
+	identificacion VARCHAR(250) NOT NULL,
+	municipio VARCHAR(250) NOT NULL,
+	direccion VARCHAR(250) NOT NULL,
+	departamento VARCHAR(250) NOT NULL,
+	edad VARCHAR(250) NOT NULL,
+	genero VARCHAR(250) NOT NULL,
+	estado_civil VARCHAR(250) NOT NULL,
+	nivel_escolaridad VARCHAR(250) NOT NULL,
+	convive VARCHAR(250) NOT NULL,
+	trabaja_actualmente VARCHAR(250) NOT NULL,
+	ingreso_mensual VARCHAR(250) NOT NULL,
+
+	radio1_1 VARCHAR(250) NOT NULL,
+	radio1_2 VARCHAR(250) NOT NULL,
+	radio1_3 VARCHAR(250) NOT NULL,
+	radio1_4 VARCHAR(250) NOT NULL,
+
+	radio2_1 VARCHAR(250) NOT NULL,
+	radio2_2 VARCHAR(250) NOT NULL,
+	radio2_3 VARCHAR(250) NOT NULL,
+	radio2_4 VARCHAR(250) NOT NULL,
+	radio2_5 VARCHAR(250) NOT NULL,
+	radio2_6 VARCHAR(250) NOT NULL,
+	radio2_7 VARCHAR(250) NOT NULL,
+	radio2_8 VARCHAR(250) NOT NULL,
+	radio2_9 VARCHAR(250) NOT NULL,
+	radio2_10 VARCHAR(250) NOT NULL,
+	radio2_11 VARCHAR(250) NOT NULL,
+	radio2_12 VARCHAR(250) NOT NULL,
+	radio2_13 VARCHAR(250) NOT NULL,
+	radio2_14 VARCHAR(250) NOT NULL,
+
+	radio3_1 VARCHAR(250) NOT NULL,
+	radio3_2 VARCHAR(250) NOT NULL,
+	radio3_3 VARCHAR(250) NOT NULL,
+	radio3_4 VARCHAR(250) NOT NULL,
+
+	radio4_1 VARCHAR(250) NOT NULL,
+	radio4_2 VARCHAR(250) NOT NULL,
+	radio4_3 VARCHAR(250) NOT NULL,
+
+	radio5_1 VARCHAR(250) NOT NULL,
+	radio5_2 VARCHAR(250) NOT NULL,
+	radio5_3 VARCHAR(250) NOT NULL,
+	radio5_4 VARCHAR(250) NOT NULL,
+	radio5_5 VARCHAR(250) NOT NULL,
+
+	radio6_1 VARCHAR(250) NOT NULL,
+	radio6_2 VARCHAR(250) NOT NULL,
+	radio6_3 VARCHAR(250) NOT NULL,
+	radio6_4 VARCHAR(250) NOT NULL,
+
+	base64 TEXT NOT NULL,
+
+	responsable INT NOT NULL,
+	fecha_creacion DATE NOT NULL,
+	PRIMARY KEY (id)
+); ALTER TABLE encuesta1 CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;
